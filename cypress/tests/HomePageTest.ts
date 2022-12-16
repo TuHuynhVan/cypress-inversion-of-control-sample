@@ -1,17 +1,23 @@
 import {HomePageUtil} from "../models/pages/HomePageUtil";
-import {homePageContainer} from "../support/containers/homepage.inversify.config";
+import {homePageContainer, homePageVariantContainer} from "../support/containers/homepage.inversify.config";
 import {DIRECTORY_TYPES} from "../support/containers/homepage.symbols";
 
 describe('Inversion demo', () => {
 
-    let homePageUtil: HomePageUtil
+    let homePage: HomePageUtil;
+    let homePageVariant: HomePageUtil;
 
     before(() => {
-        homePageUtil = homePageContainer.get<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil);
+        homePage = homePageContainer.get<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil);
+        homePageVariant = homePageVariantContainer.get<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil);
     })
 
-    it('should be able to get the instance', () => {
-        homePageUtil.sayHello();
+    it('should be able to get the instance of standard HP', () => {
+        homePage.sayHello();
+    });
+
+    it('should be able to get the instance of variant HP', () => {
+        homePageVariant.sayHello();
     });
 
 });

@@ -9,7 +9,8 @@ for JavaScript & Node.js apps powered by TypeScript.
 ├── models
 │   └── pages
 │       ├── HomePageImpl.ts
-│       └── HomePageUtil.ts
+│       ├── HomePageUtil.ts
+│       └── HomePageVariantImpl.ts
 ├── support
 │   ├── commands.js
 │   ├── containers
@@ -19,6 +20,7 @@ for JavaScript & Node.js apps powered by TypeScript.
 ├── tests
 │   └── HomePageTest.ts
 └── tsconfig.json
+
 
 ```
 
