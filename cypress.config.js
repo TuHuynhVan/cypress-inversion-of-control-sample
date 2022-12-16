@@ -5,9 +5,7 @@ module.exports = defineConfig({
         setupNodeEvents(on, config) {
             return config;
         },
-        projectId: "sdetpro",
-        specPattern: "./cypress/tests/**.*",
-        baseUrl: "https://www.simplyrecipes.com"
+        specPattern: "./cypress/tests/**.*"
     },
     defaultCommandTimeout: 10000
 });
