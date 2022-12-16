@@ -1,5 +1,6 @@
 import {HomePageUtil} from "../models/pages/HomePageUtil";
-import {homePageContainer, homePageVariantContainer} from "../support/containers/homepage.inversify.config";
+import {homePageContainer, homePageVariantContainer}
+    from "../support/containers/homepage.inversify.config";
 import {DIRECTORY_TYPES} from "../support/containers/homepage.symbols";
 
 describe('Inversion demo', () => {
@@ -13,7 +14,7 @@ describe('Inversion demo', () => {
     })
 
     it('should be able to get the instance of standard HP', () => {
-        homePage.sayHello();
+       homePage.sayHello();
     });
 
     it('should be able to get the instance of variant HP', () => {
