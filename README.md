@@ -8,9 +8,9 @@ for JavaScript & Node.js apps powered by TypeScript.
 .
 ├── models
 │   └── pages
-│       ├── HomePageImpl.ts
+│       ├── HomePageXImpl.ts
 │       ├── HomePageUtil.ts
-│       └── HomePageVariantImpl.ts
+│       └── HomePageYImpl.ts
 ├── support
 │   ├── commands.js
 │   ├── containers

@@ -1,7 +1,7 @@
-import {HomePageUtil} from "../../models/pages/HomePageUtil";
-import {GreetingUtil} from "../../models/utils/GreetingUtil";
-
 export const DIRECTORY_TYPES = {
     HomePageUtil: Symbol('HomePageUtil'),
-    GreetingUtil: Symbol('GreetingUtil')
+    GreetingUtil: Symbol('GreetingUtil'),
+    HomePageFactoryImpl: Symbol('HomePageFactoryImpl'),
+    HomePageX: Symbol('HomePageX'),
+    HomePageY: Symbol('HomePageY')
 }

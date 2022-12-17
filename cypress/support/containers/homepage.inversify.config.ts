@@ -1,22 +1,29 @@
 import {Container} from 'inversify'
 import {DIRECTORY_TYPES} from './homepage.symbols'
 import {HomePageUtil} from '../../models/pages/HomePageUtil'
-import {HomePageImpl} from '../../models/pages/HomePageImpl'
-import {HomePageVariantImpl} from "../../models/pages/HomePageVariantImpl";
 import {GreetingUtil} from "../../models/utils/GreetingUtil";
 import {EnglishGreeting} from "../../models/utils/EnglishGreeting";
+import {HomePageXImpl} from "../../models/pages/HomePageXImpl";
+import {HomePageYImpl} from "../../models/pages/HomePageYImpl";
+import {HomePageFactory} from "../../models/pages/HomePageFactory";
+import {HomePageFactoryUtil} from "../../models/pages/HomePageFactoryUtil";
 
 export const homePageContainer = new Container()
-export const homePageVariantContainer = new Container()
+
+homePageContainer
+    .bind<HomePageFactory>(DIRECTORY_TYPES.HomePageFactoryImpl)
+    .to(HomePageFactory)
 
 homePageContainer
     .bind<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil)
-    .to(HomePageImpl);
+    .to(HomePageXImpl)
+    .whenTargetNamed(DIRECTORY_TYPES.HomePageX);
+
+homePageContainer
+    .bind<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil)
+    .to(HomePageYImpl)
+    .whenTargetNamed(DIRECTORY_TYPES.HomePageY);
 
 homePageContainer
     .bind<GreetingUtil>(DIRECTORY_TYPES.GreetingUtil)
     .to(EnglishGreeting);
-
-homePageVariantContainer
-    .bind<HomePageUtil>(DIRECTORY_TYPES.HomePageUtil)
-    .to(HomePageVariantImpl);

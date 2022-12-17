@@ -4,7 +4,7 @@ import {DIRECTORY_TYPES} from "../../support/containers/homepage.symbols";
 import {GreetingUtil} from "../utils/GreetingUtil";
 
 @injectable()
-export class HomePageImpl implements HomePageUtil {
+export class HomePageXImpl implements HomePageUtil {
 
     private _greeting : GreetingUtil;
 
