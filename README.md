@@ -7,10 +7,14 @@ for JavaScript & Node.js apps powered by TypeScript.
 ```
 .
 ├── models
-│   └── pages
-│       ├── HomePageXImpl.ts
-│       ├── HomePageUtil.ts
-│       └── HomePageYImpl.ts
+│   ├── pages
+│   │   ├── HomePageFactory.ts
+│   │   ├── HomePageUtil.ts
+│   │   ├── HomePageXImpl.ts
+│   │   └── HomePageYImpl.ts
+│   └── utils
+│       ├── EnglishGreeting.ts
+│       └── GreetingUtil.ts
 ├── support
 │   ├── commands.js
 │   ├── containers
@@ -19,8 +23,7 @@ for JavaScript & Node.js apps powered by TypeScript.
 │   └── e2e.js
 ├── tests
 │   └── HomePageTest.ts
-└── tsconfig.json
-
+├── tsconfig.json
 
 ```
 
